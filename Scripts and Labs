@@ -1,0 +1,191 @@
+#!/bin/bash
+
+EDITOR=vim
+PASSWD=/etc/passwd
+RED='\033[0;41;30m'
+STD='\033[0;0;39m'
+
+pause(){
+  read -p "Presiona [Enter] para continuar..." fackEnterKey
+}
+
+one(){
+        echo "one() called"
+        pause
+}
+
+two(){
+        echo "two() called"
+        pause
+}
+
+holaMundo(){
+        /bin/bash script1.sh
+        pause
+}
+
+Script2(){
+        /bin/bash script2.sh
+        pause
+}
+
+Script3(){
+        /bin/bash script3.sh
+        pause
+}
+
+Script4(){
+        /bin/bash script4.sh
+        pause
+}
+
+Script5(){
+        /bin/bash script5.sh
+        pause
+}
+
+Script6(){
+        /bin/bash script6.sh
+        pause
+}
+
+Script7(){
+        /bin/bash script7.sh
+        pause
+}
+
+Script8(){
+        /bin/bash script8.sh
+        pause
+}
+
+Script9(){
+        /bin/bash script9.sh
+        pause
+}
+
+Script10(){
+        /bin/bash script10.sh
+        pause
+}
+
+Script11(){
+        /bin/bash script11.sh
+        pause
+}
+
+Script12(){
+        /bin/bash script12.sh
+        pause
+}
+
+Script13(){
+        /bin/bash script13.sh
+        pause
+}
+
+Script14(){
+        /bin/bash script14.sh
+        pause
+}
+
+Script15(){
+        /bin/bash script15.sh
+        pause
+}
+
+Script16(){
+        /bin/bash script16.sh
+        pause
+}
+
+Script17(){
+        /bin/bash script17.sh
+        pause
+}
+
+Script18(){
+        /bin/bash script18.sh
+        pause
+}
+Lab1(){
+        /bin/bash lab1.sh
+        pause
+}
+
+Lab2(){
+        /bin/bash lab2.sh
+        pause
+}
+
+Lab3(){
+        /bin/bash lab3.sh
+        pause
+}
+
+Lab4(){
+        /bin/bash lab4.sh
+        pause
+}
+
+Lab5(){
+        /bin/bash lab5.sh
+        pause
+}
+
+show_menus() {
+        clear
+        echo -e "\033[40m\033[32m
+                                        "#####################"
+                                        "\# M A I N - M E N U \#"
+                                        "#####################" \033[0m"
+        echo -e "\033[40m\033[1;34m
+         " 1. Set Terminal"     " 7.Script5"    "12.Script10"   "17.Script15"   "22.Lab2"
+         " 2. Reset Terminal"   " 8.Script6"    "13.Script11"   "18.Script16"   "23.Lab3"
+         " 3. Hola Mundo"               "        9.Script7"     "14.Script12"   "19.Script17"   "24.Lab4"
+         " 4. Script2"          "10.Script8"    "15.Script13"   "20.Script18"   "25.Lab.5"
+         " 5. Script3"          "11.Script9"    "16.Script14"   "21.Lab1"       "       26.Exxit"
+         " 6. Script4" \033[0m"
+}
+read_options(){
+        local choice
+        read -p "Enter choice [ 1 - 26] " choice
+        case $choice in
+                1) one ;;
+                2) two ;;
+                3) holaMundo;;
+                4) Script2 ;;
+                5) Script3 ;;
+                6) Script4 ;;
+                7) Script5 ;;
+                8) Script6 ;;
+                9) Script7 ;;
+                10) Script8 ;;
+                11) Script9 ;;
+                12) Script10 ;;
+                13) Script11 ;;
+                14) Script12 ;;
+                15) Script13 ;;
+                16) Script14 ;;
+                17) Script15 ;;
+                18) Script16 ;;
+                19) Script17 ;;
+                20) Script18 ;;
+                21) Lab1 ;;
+                22) Lab2 ;;
+                23) Lab3 ;;
+                24) Lab4 ;;
+                25) Lab5 ;;
+                26) exit 0;;
+                *) echo -e "${RED}Error...${STD}" && sleep 2
+        esac
+}
+
+trap '' SIGINT SIGQUIT SIGTSTP
+
+while true
+do
+
+        show_menus
+        read_options
+done                                                                                                                                                                                             
